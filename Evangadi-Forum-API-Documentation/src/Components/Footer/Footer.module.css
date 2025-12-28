@@ -1,0 +1,43 @@
+.footer-wrapper {
+    background-color: yellow;
+    color: #86868b;
+    font-size: .7em;
+  }
+  .footer-wrapper ul {
+      list-style: none;
+      padding-bottom: 10px;
+      padding-inline-start: 0px;
+  }
+  .footer-wrapper ul a {
+      color: #515154;
+  }
+  .copyright {
+	margin-top: 15px;
+}
+.footer-country {
+	margin-top: 8px;
+}
+.flag-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+.footer-country-name{
+	display: inline-block;
+	vertical-align: middle;
+}
+.footer-links-terms ul {
+	display: flex; 
+}
+.footer-links-terms ul li {
+	padding: 0 10px;
+	border-right: 1px solid #d2d2d7;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-links-terms ul li:first-child {
+	padding-left: 0;
+}
+.footer-links-terms ul li:last-child {
+	border-right: 0;
+}
