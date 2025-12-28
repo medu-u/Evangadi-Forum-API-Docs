@@ -4,7 +4,7 @@ import styles from "./Main.module.css";
 function Main() {
   return (
     <>
-      <section>
+      <section className={styles.paint}>
         <div className={styles.top}>
           <h1>Evangadi Forum API Documentation</h1>
           <p>Backend API Documentation for Q & A Platform</p>
@@ -16,9 +16,7 @@ function Main() {
               <p>
                 The Authentication Middleware is responsible for validating incoming
                 requests by verifying the identity of the user. It ensures that only
-                authenticated users can access protected resources within the Evangadi
-                Forum application. This middleware runs before protected API endpoints
-                are executed.
+                authenticated users can access protected resources within the Evangadi Forum application. This middleware runs before protected API endpoints are executed.
               </p>
               <h3>Middleware Behavior</h3>
               <ul>
@@ -94,7 +92,7 @@ function Main() {
           
       </section>
 
-      <section>
+      <section className={styles.paint}>
         <h2>Database Schema</h2>
 
         <h3>Users</h3>
