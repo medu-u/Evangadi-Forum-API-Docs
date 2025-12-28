@@ -53,3 +53,54 @@ body {
   }
   
 
+  .docWrapper {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .docWrapper ul li{
+      margin: 0 auto;
+  }
+  .title {
+    padding-top: 40px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  h3{
+      text-align: center;
+      
+  }
+  
+  .code {
+    font-family: monospace;
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #2f855a;
+  }
+  
+  .codeBlock {
+    background-color: #ecefee;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #328f61;
+    margin-top: 10px;
+  }
+  
+  .success {
+    color: #2f855a;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: #c53030;
+    font-weight: bold;
+  }
+  

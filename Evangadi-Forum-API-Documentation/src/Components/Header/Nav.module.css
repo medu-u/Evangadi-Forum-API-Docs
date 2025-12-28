@@ -17,11 +17,91 @@
   }
   
   /* Media Query: Desktop/Tablet nav list item styles */
-  @media (min-width: 768px) {
+   @media (min-width: 768px) {
       .navItem {
           text-align: center !important;
           padding: 0;
           border-bottom: 0px;
       }	
+  } 
+   
+  /* .links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
   }
+  
+  .links li {
+    cursor: pointer;
+    list-style: none;
+  }
+  .rightNavContainer {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6vh;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    color: white;
+    background-color: #111;
+  }
+  
+  .logo {
+    width: 5rem;
+  }
+  
+  .menu {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #111;
+      flex-direction: column;
+      display: none;
+      padding-bottom: 2rem;
+    }
+  
+    .links.active {
+      display: flex;
+    }
+  
+    .links li {
+      text-align: center;
+      list-style: none;
+    }
+    .links ul {
+      list-style: none;
+    }
+    .links li a {
+      list-style: none;
+    }
+    .links li a:hover {
+      color: #e50914; /* Netflix red on hover */
+    /* } */
+/*   
+    .menu {
+      display: block;
+    }
+  
+    .logo {
+      display: none;
+    }
+  } */ 
   
