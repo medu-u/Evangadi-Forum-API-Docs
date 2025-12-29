@@ -7,12 +7,12 @@ function Question() {
     <div className={styles.doc}>
       <h1>Get Answers for a Question</h1>
       <Link className={styles.allQuestionLink} to="/singleQuestion">
-        View Questions
-      </Link> 
-      <Link className={styles.allQuestionLink} to="/allQuestion">
-        View All Questions
+        Get Single Question
       </Link>
-     
+      <Link className={styles.allQuestionLink} to="/allQuestion">
+        Get All Questions
+      </Link>
+
       <p>
         <span className={styles.label}>Endpoint:</span>
         <span className={styles.inlineCode}>api/answer/:question_id</span>

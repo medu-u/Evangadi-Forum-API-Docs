@@ -1,0 +1,122 @@
+/* Page container */
+.doc {
+    max-width: 920px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(180deg, #ffffff, #f7f9fc);
+    border-radius: 16px;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    line-height: 1.7;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Main title */
+  .doc h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Section titles */
+  .doc h2 {
+    font-size: 22px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    color: #1e293b;
+    border-left: 5px solid #6366f1;
+    padding-left: 12px;
+  }
+  
+  /* Paragraphs */
+  .doc p {
+    margin: 8px 0;
+    color: #334155;
+  }
+  
+  /* Labels */
+  .label {
+    font-weight: 600;
+    color: #0f172a;
+    margin-right: 6px;
+  }
+  
+  /* Highlighted field names */
+  .labeled {
+    color: #16a34a;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  /* Inline code */
+  .inlineCode {
+    font-family: "JetBrains Mono", monospace;
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Lists */
+  .doc ul {
+    margin-left: 20px;
+  }
+  
+  .doc li {
+    margin-bottom: 10px;
+  }
+  
+  /* Code blocks */
+  pre {
+    background: linear-gradient(135deg, #c4c4c4, #1e293b);
+    color: #e5e7eb;
+    padding: 18px;
+    border-radius: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    margin-top: 14px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Status badges */
+  .statusOk {
+    background: #dcfce7;
+    color: #166534;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  
+  .statusError {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  
+  /* Optional link button */
+  .allAnswersLink {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .allAnswersLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+  }
+  

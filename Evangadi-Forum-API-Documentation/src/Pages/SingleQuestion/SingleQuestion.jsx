@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styles from './SingleQuestion.module.css'
 function SingleQuestion() {
   return (
     <div className={styles.doc}>

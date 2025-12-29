@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './AllQuestion.module.css'
 
 function AllQuestion() {
   return (
@@ -28,7 +29,6 @@ function AllQuestion() {
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <P>json Copy code</P>
       <pre>{`{"questions": [
 {
 "question_id": 1,

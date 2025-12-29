@@ -91,20 +91,7 @@ function Main() {
             </div>
           
       </section>
-      <section className={styles.paint}>
-        <h2>Database Schema</h2>
-
-        <h3>Users</h3>
-        <pre>
-          id (PK) username first_name last_name email password created_at
-        </pre>
-
-        <h3>Questions</h3>
-        <pre>id (PK) user_id (FK) title description created_at</pre>
-
-        <h3>Answers</h3>
-        <pre>id (PK) question_id (FK) user_id (FK) answer created_at</pre>
-      </section>
+    
     </>
   );
 }

@@ -1,107 +1,109 @@
-
+/* Nav wrapper (background + shadow) */
 .navWrapper {
-    background: rgba(0,0,0,0.8);
-    font-size: 0.85em;
-    font-weight: 200;
-  }
-  .navWrapper ul li a {
-      color: #fff;
-  }
-  .navbarToggler {
-      color: #fff;
-  }
-  .navItem {
-      text-align: left !important;
-      padding: 4px 0;
-      border-bottom: 1px solid #4b4b4b;
-  }
-  
-  /* Media Query: Desktop/Tablet nav list item styles */
-   @media (min-width: 768px) {
-      .navItem {
-          text-align: center !important;
-          padding: 0;
-          border-bottom: 0px;
-      }	
-  } 
-   
-  /* .links {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  
-  .links li {
-    cursor: pointer;
-    list-style: none;
-  }
-  .rightNavContainer {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 6vh;
-    height: 10vh;
-    position: fixed;
+  background: rgba(17, 24, 39, 0.95); /* dark transparent */
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Nav container */
+.navWrapper .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+/* Logo */
+.navWrapper .navbar-brand img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.navWrapper .navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Nav links */
+.navWrapper ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navWrapper li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navWrapper li a:hover {
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* Mobile menu button */
+.navbar-toggler {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-toggler:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    color: white;
-    background-color: #111;
-  }
-  
-  .logo {
-    width: 5rem;
-  }
-  
-  .menu {
+    background: #111827;
+    flex-direction: column;
     display: none;
-    cursor: pointer;
-    color: #fff;
+    padding: 1rem 0;
   }
-  
-  @media (max-width: 768px) {
-    .links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #111;
-      flex-direction: column;
-      display: none;
-      padding-bottom: 2rem;
-    }
-  
-    .links.active {
-      display: flex;
-    }
-  
-    .links li {
-      text-align: center;
-      list-style: none;
-    }
-    .links ul {
-      list-style: none;
-    }
-    .links li a {
-      list-style: none;
-    }
-    .links li a:hover {
-      color: #e50914; /* Netflix red on hover */
-    /* } */
-/*   
-    .menu {
-      display: block;
-    }
-  
-    .logo {
-      display: none;
-    }
-  } */ 
-  
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-collapse ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+/* Active link styling */
+.navActive {
+  background: #6366f1;
+  color: #fff !important;
+}
