@@ -3,7 +3,7 @@ import style from './Nav.module.css'
 import {Link} from 'react-router-dom'
 import NavbarList from '../NavbarList/NavbarList';
 import logo from '../../assets/images/10002.png'
-import search from '../../assets/images/search-icon-sm.png'
+
 function Nav() {
   return (
     <div className={`${style.navWrapper} fixed-top`}>
@@ -27,12 +27,6 @@ function Nav() {
               <NavbarList LinkUrl="/signup" LinkName="SignUp" />
               <NavbarList LinkUrl="/Question" LinkName="Question" />
               <NavbarList LinkUrl="/answer" LinkName="Answer" />
-              <NavbarList LinkUrl="/Support" LinkName="Support" />
-              <li className="nav-item">
-                <Link className="nav-link js-scroll-trigger" to="/search/">
-                  <img src={search} />
-                </Link>
-              </li>
             </ul>
           </div>
         </nav>

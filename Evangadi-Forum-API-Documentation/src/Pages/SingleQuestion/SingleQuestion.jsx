@@ -1,21 +1,12 @@
 import React from 'react'
-import styles from './Question.module.css'
-import { Link } from 'react-router-dom';
 
-function Question() {
+function SingleQuestion() {
   return (
     <div className={styles.doc}>
-      <h1>Get Answers for a Question</h1>
-      <Link className={styles.allQuestionLink} to="/singleQuestion">
-        View Questions
-      </Link> 
-      <Link className={styles.allQuestionLink} to="/allQuestion">
-        View All Questions
-      </Link>
-     
+      <h1>Get Single Question</h1>
       <p>
         <span className={styles.label}>Endpoint:</span>
-        <span className={styles.inlineCode}>api/answer/:question_id</span>
+        <span className={styles.inlineCode}>api/question/:question_id</span>
       </p>
 
       <p>
@@ -24,13 +15,13 @@ function Question() {
       </p>
 
       <h2>Description</h2>
-      <p>Retrieves answers for a specific question.</p>
+      <p>Retrieves details of a specific question</p>
 
       <h2>URL Parameters</h2>
       <ul>
         <li>
           <span className={styles.labeled}>question_id (integer)</span>: The
-          unique identifier of the question
+          unique identifier of the question.
         </li>
       </ul>
 
@@ -45,22 +36,15 @@ function Question() {
       </p>
 
       <pre>{`{
-"answers": [
-{
-"answer_id": 1,
-"content": "This is an answer.",
-"user_name": ‘Abebe’,
-"created_at": "2023-06-30T12:00:00Z"}, 
-{
-"answer_id": 2,
-"content": "This is another answer.",
-"user_name": ‘Almaz’,
-"created_at": "2023-06-30T13:00:00Z"
+"question": {
+"question_id": 1,
+"title": "First Question",
+"content": "This is the first question.",
+"user_id": 123,
+"created_at": "2023-06-30T12:00:00Z"
 }
-]
-
-    
-        }`}</pre>
+  
+      }`}</pre>
 
       <h2>Error Responses</h2>
 
@@ -73,7 +57,7 @@ function Question() {
       <pre>{`{
 "error": "Not Found",
 "message": "The requested question could not be found."
-        }`}</pre>
+      }`}</pre>
 
       <p>
         <span className={styles.label}>Status Code:</span>{" "}
@@ -82,11 +66,11 @@ function Question() {
       <p>Description:An unexpected error occurred.</p>
 
       <pre>{`{"error": "Internal Server Error",
-    "message": "An unexpected error occurred."
-    
-        }`}</pre>
+  "message": "An unexpected error occurred."
+  
+      }`}</pre>
     </div>
   );
 }
 
-export default Question
+export default SingleQuestion

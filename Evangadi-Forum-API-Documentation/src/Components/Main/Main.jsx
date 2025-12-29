@@ -91,7 +91,6 @@ function Main() {
             </div>
           
       </section>
-
       <section className={styles.paint}>
         <h2>Database Schema</h2>
 

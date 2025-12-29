@@ -1,14 +1,15 @@
 import React from 'react'
-import styles from './Answer.module.css'
-import {Link} from 'react-router-dom'
 
-function Answer() {
+function PostQuestion() {
   return (
     <div className={styles.doc}>
       <h1>Post Answers for a Question</h1>
+      <Link className={styles.allAnswersLink} to="/allAnswer">
+        View All Answer
+      </Link>
       <p>
         <span className={styles.label}>Endpoint:</span>
-        <span className={styles.inlineCode}>api/answer</span>
+        <span className={styles.inlineCode}>api/question</span>
       </p>
 
       <p>
@@ -17,17 +18,17 @@ function Answer() {
       </p>
 
       <h2>Description</h2>
-      <p>Submits an answer for a specific question.</p>
+      <p>Creates a new question.</p>
 
       <h2>Request Body </h2>
       <ul>
         <li>
-          <span className={styles.labeled}>questionid (number)</span>:The answer
-          for a specific question.
+          <span className={styles.labeled}>title (string)</span>:The The title
+          of the question.
         </li>
         <li>
-          <span className={styles.labeled}> answer (string)</span>: The answer
-          for a specific question.
+          <span className={styles.labeled}> description (string)</span>: The
+          description of the question.
         </li>
       </ul>
 
@@ -41,7 +42,7 @@ function Answer() {
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <pre>{`{"message": "Answer posted successfully"
+      <pre>{`{"message": "Question created successfully"
    
        }`}</pre>
 
@@ -72,4 +73,4 @@ function Answer() {
   );
 }
 
-export default Answer
+export default PostQuestion
