@@ -53,6 +53,7 @@ function Main() {
               <h2>Request Headers</h2>
               <span className={styles.code}>Authorization</span>: Bearer token
               <p>
+                <br/>
                 The token is typically a JSON Web Token (JWT) generated during user
                 login. The token must be included in every request that requires
                 authentication.
@@ -60,32 +61,32 @@ function Main() {
               <h2>Successful Response</h2>
               <p>
                 <strong>Status Code:</strong>
-                <span className={styles.success}>200 OK</span>
+                <span className={styles.success}> 200 OK</span>
               </p>
               <p>
                 <strong>Content-Type:</strong>
                 <span className={styles.code}>application/json</span>
               </p>
               <pre className={styles.codeBlock}>
-                {`{
-             "message": "Valid user",
-             "username": "Kebede",
-             "userid": "123"
-           }`}
+                {`            {
+                  "message": "Valid user",
+                  "username": "Kebede",
+                  "userid": "123"
+            }`}
               </pre>
               <h2>Error Responses</h2>
               <p>
                 <strong>Status Code:</strong>
-                <span className={styles.error}>401 Unauthorized</span>
+                <span className={styles.error}> 401 Unauthorized</span>
               </p>
               <p>
                 <strong>Description:</strong> Authentication credentials were missing or
                 incorrect.
               </p>
               <pre className={styles.codeBlock}>
-                {`{
-             "error": "Unauthorized",
-             "message": "Authentication invalid"
+                {`          {
+                "error": "Unauthorized",
+                "message": "Authentication invalid"
            }`}
               </pre>
             </div>

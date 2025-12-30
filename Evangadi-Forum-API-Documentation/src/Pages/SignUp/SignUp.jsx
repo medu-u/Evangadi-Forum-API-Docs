@@ -50,60 +50,64 @@ function SignUp() {
       <h2>Successful Response</h2>
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusOk}>201 Created</span>
+        <span className={styles.statusOk}> 201 Created</span>
       </p>
       <p>
         <span className={styles.label}>Content-Type:</span>
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <pre>{`{
-"message": "User registered successfully"
-}`}</pre>
+      <pre>{`     {
+        "message": "User registered successfully"
+     }`}</pre>
 
       <h2>Error Responses</h2>
 
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusError}>400 Bad Request</span>
+        <span className={styles.statusError}> 400 Bad Request</span>
       </p>
-      <p>Description: Missing required fields.</p>
+      <p>Description: Missing or invalid fields.</p>
 
-      <pre>{`{
-"message": "Please provide all required fields"
-}`}</pre>
+      <pre>{`      {
+           "error": "Bad Request",
+           "message": "Please provide all required fields"
+      }`}</pre>
 
       <p>
         <span className={styles.label}>Status Code:</span>{" "}
         <span className={styles.statusError}>400 Bad Request</span>
       </p>
-      <p>Description: Password must be at least 8 characters.</p>
+      <p>Description: Missing or invalid fields.</p>
 
-      <pre>{`{
-"error": "Bad Request",
-"message": "Password must be at least 8 characters"
-}`}</pre>
-
-      <p>
-        <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusError}>409 Conflict</span>
-      </p>
-      <p>Description: Email already exists.</p>
-
-      <pre>{`{
-"error": "Conflict",
-"message": "Email already exists"
-}`}</pre>
+      <pre>{`      {
+          "error": "Bad Request",
+          "message": "Password must be at least 8 characters"
+      }`}</pre>
 
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusError}>500 Internal Server Error</span>
+        <span className={styles.statusError}> 409 Conflict</span>
       </p>
-      <p>Description: Unexpected server error occurred.</p>
+      <p>
+        Description: A user with the provided username or email already exists.
+      </p>
 
-      <pre>{`{
-"message": "Internal server error occurred"
-}`}</pre>
+      <pre>{`     {
+          "error": "Conflict",
+          "message": "User already existed"
+     }`}</pre>
+
+      <p>
+        <span className={styles.label}>Status Code:</span>
+        <span className={styles.statusError}> 500 Internal Server Error</span>
+      </p>
+      <p>Description: An unexpected error occurred.</p>
+
+      <pre>{`      {
+          "error": "Internal Server Error",
+          "message": "Internal server error occurred"
+      }`}</pre>
     </div>
   );
 }

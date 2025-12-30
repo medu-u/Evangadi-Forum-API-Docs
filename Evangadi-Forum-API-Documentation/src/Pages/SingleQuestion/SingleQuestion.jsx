@@ -20,43 +20,42 @@ function SingleQuestion() {
       <h2>URL Parameters</h2>
       <ul>
         <li>
-          <span className={styles.labeled}>question_id (integer)</span>: The
-          unique identifier of the question.
+          <span className={styles.labeled}>question_id (integer)</span>: The unique identifier of the question.
         </li>
       </ul>
 
       <h2>Successful Response</h2>
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusOk}>200 OK</span>
+        <span className={styles.statusOk}> 200 OK</span>
       </p>
       <p>
         <span className={styles.label}>Content-Type:</span>
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <pre>{`{
-"question": {
-"question_id": 1,
-"title": "First Question",
-"content": "This is the first question.",
-"user_id": 123,
-"created_at": "2023-06-30T12:00:00Z"
-}
-  
-      }`}</pre>
+      <pre>{`    {
+        "question": 
+        {
+            "question_id": 1,
+            "title": "First Question",
+            "content": "This is the first question.",
+            "user_id": 123,
+            "created_at": "2023-06-30T12:00:00Z"
+        }
+    }`}</pre>
 
       <h2>Error Responses</h2>
 
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusError}>404 Not Found</span>
+        <span className={styles.statusError}> 404 Not Found</span>
       </p>
       <p>The specified question was not found.</p>
 
-      <pre>{`{
-"error": "Not Found",
-"message": "The requested question could not be found."
+      <pre>{`      {
+            "error": "Not Found",
+            "message": "The requested question could not be found."
       }`}</pre>
 
       <p>
@@ -65,10 +64,10 @@ function SingleQuestion() {
       </p>
       <p>Description:An unexpected error occurred.</p>
 
-      <pre>{`{"error": "Internal Server Error",
-  "message": "An unexpected error occurred."
-  
-      }`}</pre>
+      <pre>{`     {
+            "error": "Internal Server Error",
+            "message": "An unexpected error occurred."
+     }`}</pre>
     </div>
   );
 }

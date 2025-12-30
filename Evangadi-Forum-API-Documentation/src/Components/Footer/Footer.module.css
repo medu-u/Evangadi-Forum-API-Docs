@@ -1,43 +1,40 @@
-.footer-wrapper {
-    background-color: yellow;
-    color: #86868b;
-    font-size: .7em;
+/* Footer wrapper */
+:global(.row) {
+    
+    background:rgb(119, 79, 3);
+    padding: 20px 15px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
-  .footer-wrapper ul {
-      list-style: none;
-      padding-bottom: 10px;
-      padding-inline-start: 0px;
-  }
-  .footer-wrapper ul a {
-      color: #515154;
-  }
+  
+  /* Copyright text */
   .copyright {
-	margin-top: 15px;
-}
-.footer-country {
-	margin-top: 8px;
-}
-.flag-wrapper {
-	display: inline-block;
-	vertical-align: middle;
-	padding-right: 5px;
-}
-.footer-country-name{
-	display: inline-block;
-	vertical-align: middle;
-}
-.footer-links-terms ul {
-	display: flex; 
-}
-.footer-links-terms ul li {
-	padding: 0 10px;
-	border-right: 1px solid #d2d2d7;
+    color: #9ca3af;
+    font-size: 13px;
+    letter-spacing: 0.4px;
     text-align: center;
-    text-decoration: none;
-}
-.footer-links-terms ul li:first-child {
-	padding-left: 0;
-}
-.footer-links-terms ul li:last-child {
-	border-right: 0;
-}
+    font-weight: 400;
+  }
+  
+  /* Highlight brand name if needed later */
+  .copyright span {
+    color: #f97316;
+    font-weight: 500;
+  }
+  
+  /* Subtle hover glow (optional, feels premium) */
+  .copyright:hover {
+    color: #e5e7eb;
+    transition: color 0.3s ease;
+  }
+  
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .copyright {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+  

@@ -1,4 +1,5 @@
 /* Main Card */
+/* Main Card */
 .doc {
   background: linear-gradient(135deg, #ffffff, #f8fafc);
   max-width: 900px;
@@ -8,41 +9,17 @@
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.7;
-  transition: transform 0.3s ease;
-}
-
-.doc:hover {
-  transform: translateY(-2px);
 }
 
 /* Page Title */
 .doc h1 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #6366f1, #22c55e);
+  margin-bottom: 30px;
+  background: #9b582f;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* Links as Buttons */
-.allQuestionLink {
-  display: inline-block;
-  margin: 10px 10px 20px 0;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #4f46e5, #22c55e);
-  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
-  transition: all 0.3s ease;
-}
-
-.allQuestionLink:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 22px rgba(79, 70, 229, 0.4);
 }
 
 /* Section Headings */
@@ -50,7 +27,7 @@
   font-size: 22px;
   margin-top: 35px;
   margin-bottom: 10px;
-  color: #4f46e5;
+  color:#9b582f;
   border-left: 5px solid #22c55e;
   padding-left: 12px;
 }
@@ -58,7 +35,7 @@
 /* Paragraphs */
 .doc p {
   margin: 10px 0;
-  color: #334155;
+  color: #1f1f1f;
 }
 
 /* Labels */
@@ -67,9 +44,9 @@
   color: #0f172a;
 }
 
-/* Parameter Highlight */
+/* Parameter Labels */
 .labeled {
-  color: #16a34a;
+  color:#ab9d56;
   font-style: italic;
   font-weight: 500;
 }
@@ -98,7 +75,7 @@
 
 /* Code Blocks */
 pre {
-  background: linear-gradient(135deg, #020617, #0f172a);
+  background: #e5e2e1;
   padding: 20px;
   border-radius: 14px;
   font-family: "Fira Code", monospace;
@@ -106,8 +83,9 @@ pre {
   color: #e5e7eb;
   margin-top: 15px;
   overflow-x: auto;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: #9b582f;
 }
+
 
 /* Status Colors */
 .statusOk {
@@ -118,6 +96,47 @@ pre {
 .statusError {
   color: #dc2626;
   font-weight: 700;
+}
+
+/* Smooth Hover */
+.doc:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doc {
+    padding: 30px 20px;
+  }
+
+  .doc h1 {
+    font-size: 26px;
+  }
+
+  .doc h2 {
+    font-size: 20px;
+  }
+}
+
+
+/* Links as Buttons */
+.allQuestionLink {
+  display: inline-block;
+  margin: 10px 10px 20px 0;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #e48950, #c58422);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+.allQuestionLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px #9b582f;
 }
 
 /* Responsive */

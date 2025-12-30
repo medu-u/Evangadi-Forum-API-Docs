@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './Login.module.css'
+import React from "react";
+import styles from "./Login.module.css";
 function LogIn() {
   return (
     <div className={styles.doc}>
@@ -22,7 +22,7 @@ function LogIn() {
       <ul>
         <li>
           <span className={styles.labeled}>email(string)</span>:The email of the
-          user
+          user.
         </li>
         <li>
           <span className={styles.labeled}> password (string)</span>: The
@@ -33,42 +33,53 @@ function LogIn() {
       <h2>Successful Response</h2>
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusOk}>200 OK</span>
+        <span className={styles.statusOk}> 200 OK</span>
       </p>
       <p>
         <span className={styles.label}>Content-Type:</span>
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <pre>{`{"message": "User login successful",
-"token": "jwt_token"
-
-    }`}</pre>
+      <pre>{`     {
+            "message": "User login successful",
+            "token": "jwt_token"
+     }`}</pre>
 
       <h2>Error Responses</h2>
 
       <p>
         <span className={styles.label}>Status Code:</span>
-        <span className={styles.statusError}>400 Bad Request</span>
+        <span className={styles.statusError}> 401 Unauthorized</span>
       </p>
-      <p>Description: Missing required fields.</p>
+      <p>Description:Invalid credentials.</p>
 
-      <pre>{`{"error": "Bad Request",
-"message": "Please provide all required fields"
-    }`}</pre>
+      <pre>{`    {
+        "error": "Unauthorized",
+        "message": "Invalid username or password""
+     }`}</pre>
 
+      <p>
+        <span className={styles.label}>Status Code:</span>
+        <span className={styles.statusError}> 400 Bad Request</span>
+      </p>
+      <p>Description: Missing or invalid fields.</p>
+
+      <pre>{`    {
+        "error": "Bad Request",
+        "message": "Please provide all required fields"
+     }`}</pre>
       <p>
         <span className={styles.label}>Status Code:</span>{" "}
         <span className={styles.statusError}>500 Internal Server Error</span>
       </p>
       <p>Description:An unexpected error occurred.</p>
 
-      <pre>{`{"error": "Internal Server Error",
-"message": "An unexpected error occurred."
-
-    }`}</pre>
+      <pre>{`     {
+          "error": "Internal Server Error",
+          "message": "An unexpected error occurred."
+      }`}</pre>
     </div>
   );
 }
 
-export default LogIn
+export default LogIn;

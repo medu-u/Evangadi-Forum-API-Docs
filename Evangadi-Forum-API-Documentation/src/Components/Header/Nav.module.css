@@ -1,6 +1,6 @@
 /* Nav wrapper (background + shadow) */
 .navWrapper {
-  background: rgba(17, 24, 39, 0.95); /* dark transparent */
+  background: #191919; /* dark transparent */
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
@@ -50,10 +50,10 @@
 }
 
 .navWrapper li a:hover {
-  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  background: #F25E00;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 12px #F25E00;
 }
 
 /* Mobile menu button */
@@ -69,6 +69,7 @@
 
 .navbar-toggler:hover {
   transform: scale(1.1);
+  color: #fff;
 }
 
 /* Responsive menu */

@@ -8,21 +8,15 @@
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.7;
-  transition: transform 0.3s ease;
-}
-
-/* Hover lift */
-.doc:hover {
-  transform: translateY(-2px);
 }
 
 /* Page Title */
 .doc h1 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   margin-bottom: 30px;
-  background: linear-gradient(90deg, #6366f1, #22c55e);
+  background: #9b582f;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -32,7 +26,7 @@
   font-size: 22px;
   margin-top: 35px;
   margin-bottom: 10px;
-  color: #4f46e5;
+  color:#9b582f;
   border-left: 5px solid #22c55e;
   padding-left: 12px;
 }
@@ -40,7 +34,7 @@
 /* Paragraphs */
 .doc p {
   margin: 10px 0;
-  color: #334155;
+  color: #1f1f1f;
 }
 
 /* Labels */
@@ -49,9 +43,9 @@
   color: #0f172a;
 }
 
-/* Request Parameters */
+/* Parameter Labels */
 .labeled {
-  color: #16a34a;
+  color:#ab9d56;
   font-style: italic;
   font-weight: 500;
 }
@@ -80,7 +74,7 @@
 
 /* Code Blocks */
 pre {
-  background: linear-gradient(135deg, #e6e7ec, #0f172a);
+  background: #e5e2e1;
   padding: 20px;
   border-radius: 14px;
   font-family: "Fira Code", monospace;
@@ -88,8 +82,9 @@ pre {
   color: #e5e7eb;
   margin-top: 15px;
   overflow-x: auto;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: #9b582f;
 }
+
 
 /* Status Colors */
 .statusOk {
@@ -100,6 +95,12 @@ pre {
 .statusError {
   color: #dc2626;
   font-weight: 700;
+}
+
+/* Smooth Hover */
+.doc:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
 /* Responsive */

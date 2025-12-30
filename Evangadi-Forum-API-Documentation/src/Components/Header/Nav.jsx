@@ -10,6 +10,7 @@ function Nav() {
       <div className="container">
         <nav className="navbar navbar-toggleable-sm navbar-expand-md">
           <button
+            style={{ color: "orange" }}
             className="navbar-toggler navbar-toggler-right"
             type="button"
             data-toggle="collapse"
@@ -17,16 +18,22 @@ function Nav() {
           >
             ☰
           </button>
-          <Link className="navbar-brand mx-auto" to="/">
+          <Link className="navbar-brand " to="/">
             <img src={logo} />
           </Link>
 
           <div className="navbar-collapse collapse">
             <ul className="navbar-nav nav-justified w-100 nav-fill">
-              <NavbarList LinkUrl="/login" LinkName="LogIn" />
               <NavbarList LinkUrl="/signup" LinkName="SignUp" />
-              <NavbarList LinkUrl="/Question" LinkName="Question" />
+              <NavbarList LinkUrl="/login" LinkName="LogIn" />
+              <NavbarList LinkUrl="/postAnswer" LinkName="Post Answer" />
               <NavbarList LinkUrl="/answer" LinkName="Answer" />
+              <NavbarList LinkUrl="/postQuestion" LinkName="Post Question" />
+              <NavbarList
+                LinkUrl="/singleQuestion"
+                LinkName="Single Question"
+              />
+              <NavbarList LinkUrl="/allQuestion" LinkName="All Question" />
             </ul>
           </div>
         </nav>
@@ -99,3 +106,85 @@ export default Nav
 // }
 
 // export default Nav
+// import React, { useState } from "react";
+// import style from "./Nav.module.css";
+// import { Link } from "react-router-dom";
+// import logo from "../../assets/images/10002.png"
+// function Nav() {
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   return (
+//     <>
+//       <div className={style.navWrapper}>
+//         <nav className={style.navbar}>
+//           <Link className="navbar-brand" to="/">
+//             <img src={logo} alt="Logo" />
+//           </Link>
+
+//           <div className={style.navbar_collapse}>
+//             <ul>
+//               <li>
+//                 <Link to="/login">LogIn</Link>
+//               </li>
+//               <li>
+//                 <Link to="/signup">SignUp</Link>
+//               </li>
+//               <li>
+//                 <Link to="/question">Question</Link>
+//               </li>
+//               <li>
+//                 <Link to="/answer">Answer</Link>
+//               </li>
+//             </ul>
+//           </div>
+
+//           <button
+//             className={style.menuButton}
+//             onClick={() => setMenuOpen(true)}
+//           >
+//             ☰
+//           </button>
+//         </nav>
+//       </div>
+
+//       <div className={`${style.mobileMenu} ${menuOpen ? "show" : ""}`}>
+//         <button
+//           className={style.closeButton}
+//           onClick={() => setMenuOpen(false)}
+//         >
+//           ×
+//         </button>
+//         <ul>
+//           <li>
+//             <Link to="/" onClick={() => setMenuOpen(false)}>
+//               Home
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/login" onClick={() => setMenuOpen(false)}>
+//               LogIn
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/signup" onClick={() => setMenuOpen(false)}>
+//              SignUp
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/question" onClick={() => setMenuOpen(false)}>
+//              Question
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/answer" onClick={() => setMenuOpen(false)}>
+//              Answer
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Nav;
+

@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./PostQuestion.module.css";
+import styles from './PostAnswer.module.css'
 
-function PostQuestion() {
+function PostAnswer() {
   return (
     <div className={styles.doc}>
-      <h1>Post Question</h1>
+      <h1>Post Answers for a Question</h1>
       <p>
         <span className={styles.label}>Endpoint:</span>
-        <span className={styles.inlineCode}>api/question</span>
+        <span className={styles.inlineCode}>api/answer</span>
       </p>
 
       <p>
@@ -16,17 +16,17 @@ function PostQuestion() {
       </p>
 
       <h2>Description</h2>
-      <p>Creates a new question.</p>
+      <p>Submits an answer for a specific question.</p>
 
       <h2>Request Body </h2>
       <ul>
         <li>
-          <span className={styles.labeled}>title (string)</span>:The The title
-          of the question.
+          <span className={styles.labeled}>questionid (number)</span>:The id for
+          a specific question.
         </li>
         <li>
-          <span className={styles.labeled}> description (string)</span>: The
-          description of the question.
+          <span className={styles.labeled}> answer (string)</span>: The answer
+          for a specific question.
         </li>
       </ul>
 
@@ -40,9 +40,11 @@ function PostQuestion() {
         <span className={styles.inlineCode}>application/json</span>
       </p>
 
-      <pre>{`        { 
-             "message": "Question created successfully"
-          }`}</pre>
+      <pre>
+        {`      {
+         "message": "Answer posted successfully"
+      }`}
+      </pre>
 
       <h2>Error Responses</h2>
 
@@ -52,27 +54,23 @@ function PostQuestion() {
       </p>
       <p>Description: Missing or invalid fields.</p>
 
-      <P>json</P>
-      <p>Copy code</p>
-      <pre>{`          {  
-
-            "error": "Bad Request",
-            "message": "Please provide all required fields"
-
-           }`}</pre>
+      <pre>{`      {
+        "error": "Bad Request",
+        "message": "Please provide answer""
+      }`}</pre>
 
       <p>
         <span className={styles.label}>Status Code:</span>{" "}
-        <span className={styles.statusError}>500 Internal Server Error</span>
+        <span className={styles.statusError}> 500 Internal Server Error</span>
       </p>
       <p>Description:An unexpected error occurred.</p>
 
-      <pre>{`         {
-            "error": "Internal Server Error",
-            "message": "An unexpected error occurred."
-          }`}</pre>
+      <pre>{`     {
+        "error": "Internal Server Error",
+        "message": "An unexpected error occurred."
+     }`}</pre>
     </div>
   );
 }
 
-export default PostQuestion;
+export default PostAnswer;
