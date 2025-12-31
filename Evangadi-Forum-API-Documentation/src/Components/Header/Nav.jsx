@@ -18,7 +18,7 @@ function Nav() {
           >
             ☰
           </button>
-          <Link className="navbar-brand " to="/">
+          <Link className="navbar_brand " to="/">
             <img src={logo} />
           </Link>
 

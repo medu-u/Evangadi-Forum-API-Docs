@@ -52,8 +52,11 @@ function PostQuestion() {
       </p>
       <p>Description: Missing or invalid fields.</p>
 
-      <P>json</P>
-      <p>Copy code</p>
+      <p>
+        json <br />
+        Copy code
+      </p>
+
       <pre>{`          {  
 
             "error": "Bad Request",

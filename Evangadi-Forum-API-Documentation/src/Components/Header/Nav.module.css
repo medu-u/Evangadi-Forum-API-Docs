@@ -22,8 +22,8 @@
 }
 
 /* Logo */
-.navWrapper .navbar-brand img {
-  width: 120px;
+.navWrapper .navbar_brand img {
+  width: 80%;
   transition: transform 0.3s ease;
 }
 
