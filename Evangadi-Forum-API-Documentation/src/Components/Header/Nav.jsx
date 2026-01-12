@@ -1,47 +1,43 @@
-import React from 'react'
-import style from './Nav.module.css'
-import {Link} from 'react-router-dom'
-import NavbarList from '../NavbarList/NavbarList';
-import logo from '../../assets/images/10002.png'
+import React, { useState } from "react";
+import style from "./Nav.module.css";
+import { Link } from "react-router-dom";
+import NavbarList from "../NavbarList/NavbarList";
+import logo from "../../assets/images/EvangadiLogo.jpeg";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={`${style.navWrapper} fixed-top`}>
-      <div>
-        <nav className="navbar navbar-toggleable-md navbar-expand-md">
-          <button
-            style={{ color: "orange" }}
-            className="navbar-toggler navbar-toggler-right"
-            type="button"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            ☰
-          </button>
-          <Link className="navbar_brand " to="/">
-            <img src={logo} />
-          </Link>
-
-          <div className="navbar-collapse collapse">
-            <ul className="navbar-nav nav-justified w-100 nav-fill">
-              <NavbarList LinkUrl="/signup" LinkName="SignUp" />
-              <NavbarList LinkUrl="/login" LinkName="LogIn" />
-              <NavbarList LinkUrl="/postAnswer" LinkName="Post Answer" />
-              <NavbarList LinkUrl="/answer" LinkName="Answer" />
-              <NavbarList LinkUrl="/postQuestion" LinkName="Post Question" />
-              <NavbarList
-                LinkUrl="/singleQuestion"
-                LinkName="Single Question"
-              />
-              <NavbarList LinkUrl="/allQuestion" LinkName="All Question" />
-            </ul>
+      <nav className={style.navigation}>
+        <div className={style.container}>
+          {/* Logo */}
+          <div className={style.evLogo__continer}>
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
-        </nav>
-      </div>
+
+          {/* Custom Hamburger (from first component) */}
+          <div className={style.hamburger} onClick={() => setIsOpen(!isOpen)}>
+            <div className={style.bar}></div>
+            <div className={style.bar}></div>
+            <div className={style.bar}></div>
+          </div>
+
+          {/* Menu */}
+          <div className={`${style.nav__links} ${isOpen ? style.open : ""}`}>
+            <NavbarList LinkUrl="/signup" LinkName="SignUp" />
+            <NavbarList LinkUrl="/login" LinkName="LogIn" />
+            <NavbarList LinkUrl="/postAnswer" LinkName="Post Answer" />
+            <NavbarList LinkUrl="/answer" LinkName="Answer" />
+            <NavbarList LinkUrl="/postQuestion" LinkName="Post Question" />
+            <NavbarList LinkUrl="/allQuestion" LinkName="All Question" />
+          </div>
+        </div>
+      </nav>
     </div>
   );
-  
 }
 
-export default Nav
-
+export default Nav;

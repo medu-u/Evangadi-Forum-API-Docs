@@ -5,13 +5,13 @@ import SignUp from './Pages/SignUp/SignUp';
 
 import Answer from './Pages/Answer/Answer';
 
-import Four04 from './Pages/Fouro4/Four04';
 import SharedLayout from './Components/SharedLayout/SharedLayout';
 import Main from './Components/Main/Main';
 import AllQuestion from './Pages/allQuestion/AllQuestion.jsx';
 import PostQuestion from './Pages/PostQuestion/PostQuestion.jsx';
 import SingleQuestion from './Pages/SingleQuestion/SingleQuestion.jsx';
 import PostAnswer from './Pages/PostAnswer/PostAnswer.jsx';
+import NotFound from './Pages/Fouro4/NotFound.jsx';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="allQuestion" element={<AllQuestion />} />
         <Route path="answer" element={<Answer />} />
         <Route path="postAnswer" element={<PostAnswer />} />
-        <Route path="*" element={<Four04 />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
