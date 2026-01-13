@@ -2,12 +2,16 @@
   background-color: #3b455a;
   color: #ffffff;
   padding: 40px 0;
+  max-width: 1000px;
+  margin: auto;
+  max-height: 250px;
 }
 
 .footer_container {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+  
 }
 
 .footer_section {

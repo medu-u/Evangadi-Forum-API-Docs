@@ -1,20 +1,17 @@
 /* Page Background */
 .paint {
-  background: #ffffff;
-  margin: 0px auto;
+  background: #FFFFFF;
+  margin: 30px auto;
   padding: 40px 25px;
-  max-width: 1900px;
+  max-width: 1000px;
   border-radius: 20px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.08);
 }
-P{
-  font-size: 21px;
-  padding-left: 50px;
-  
-}
+
 /* Top Header */
 .top {
-text-align: center;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .top h1 {
@@ -23,11 +20,11 @@ text-align: center;
   background: #9b582f;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .top p {
-  color: #250f01;
+  color: #783004;
   font-size: 18px;
   margin-top: 10px;
 }
@@ -35,10 +32,10 @@ text-align: center;
 /* Documentation Wrapper */
 .docWrapper {
   background: white;
-  max-width: 1400px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  border-radius: 0px;
+  padding: 10px;
+  border-radius: 14px;
 }
 
 /* Titles */
@@ -46,12 +43,12 @@ text-align: center;
   text-align: center;
   font-size: 26px;
   font-weight: 600;
-  color: #010a18;
+  color: #1e293b;
 }
 
 .paint h2 {
-  font-size: 24px;
-  margin: 20px 0px;
+  font-size: 22px;
+  margin-top: 30px;
   color: #9c4008;
   border-left: 4px solid #dfbe04;
   padding-left: 10px;
@@ -59,29 +56,21 @@ text-align: center;
 
 .paint h3 {
   margin-top: 25px;
-  font-size: 24px;
-  color: #8d3b08;
+  font-size: 18px;
+  color:#8d3b08;
   text-align: left;
-  padding: 10px;
 }
 
 /* Lists */
 .docWrapper ul {
-  padding-left: 40px;
+  padding-left: 25px;
   margin-top: 15px;
 }
 
 .docWrapper li {
   margin-bottom: 10px;
   line-height: 1.6;
-  color: #0a0000;
-  font-size: 21px;
-  padding-left: 90px;
-  list-style: none;
-  
-}
-.docWrapper span{
-  font-size: 18px;
+  color: #334155;
 }
 
 /* Inline Code */
@@ -91,7 +80,7 @@ text-align: center;
   padding: 4px 8px;
   border-radius: 6px;
   color: #047857;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /* Code Blocks */
@@ -100,7 +89,7 @@ text-align: center;
   padding: 18px;
   border-radius: 12px;
   font-family: "Fira Code", monospace;
-  font-size: 18px;
+  font-size: 14px;
   color: #e5e7eb;
   margin-top: 15px;
   overflow-x: auto;
@@ -110,13 +99,11 @@ text-align: center;
 .success {
   color: #16a34a;
   font-weight: 600;
-  font-size: 18px;
 }
 
 .error {
   color: #b71717;
   font-weight: 600;
-  font-size: 18px;
 }
 
 /* Database Schema Section */
@@ -124,7 +111,7 @@ text-align: center;
   background: #f1f5f9;
   padding: 15px;
   border-radius: 10px;
-  font-size: 21px;
+  font-size: 14px;
   color: #334155;
 }
 
